@@ -1,2 +1,84 @@
-# IoT-automacao-residencial
-Projeto da disciplina de sistemas ciberfísicos colaborativos
+<h1>Controle de Ventilador com ESP32</h1>
+<img src="https://i.imgur.com/7ZxY6yR.png" alt="Imagem do projeto">
+<p align="center">
+  <img src="https://img.shields.io/badge/status-completed-green" alt="Status: Completed">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version: 1.0.0">
+  <img src="https://img.shields.io/badge/license-MIT-yellow" alt="License: MIT">
+</p>
+
+## Índice
+- Descrição
+- Funcionalidades
+- Demonstração
+- Acesso
+- Tecnologias
+- Contribuidores
+- Licença
+- Referências
+
+## Descrição
+Este projeto é um programa para controlar um ventilador com base na temperatura, umidade e movimento do ambiente, usando um sensor DHT11, um sensor PIR e um módulo ESP32. O programa se conecta a uma rede WiFi e a um broker MQTT para enviar e receber mensagens sobre os dados dos sensores e o estado do ventilador. O programa também permite que o usuário ligue ou desligue o ventilador manualmente através de um tópico MQTT. O objetivo deste projeto é criar uma solução inteligente e prática para o controle de ventilação de um ambiente. O público-alvo deste projeto são pessoas que desejam automatizar ou personalizar o funcionamento de um ventilador em sua casa ou escritório.
+
+## Funcionalidades
+- Leitura da temperatura e umidade do ambiente a cada 2 segundos usando o sensor DHT11;
+- Leitura do movimento do ambiente usando o sensor PIR;
+- Envio dos dados dos sensores para o broker MQTT nos tópicos `unifor/cps/temp`, `unifor/cps/umid` e `unifor/cps/pir`;
+- Recebimento de comandos para ligar ou desligar o ventilador pelo broker MQTT no tópico `unifor/cps/vent`;
+- Acionamento do ventilador de acordo com a lógica: se a temperatura for maior que 25°C, a umidade for menor que 80% e houver movimento no ambiente, o ventilador é ligado; caso contrário, o ventilador é desligado;
+- Modo manual para ligar ou desligar o ventilador independentemente da lógica, ativado pelo comando `on` ou `off` no tópico `unifor/cps/vent`;
+- Envio do estado do ventilador para o broker MQTT no tópico `unifor/cps/vent`, sendo `on` para ligado e `off` para desligado.
+
+## Demonstração
+Veja abaixo um vídeo demonstrando o funcionamento do projeto:
+
+!Vídeo do projeto
+
+## Acesso
+Para acessar o projeto, você precisa ter os seguintes componentes:
+
+- Um módulo ESP32;
+- Um sensor DHT11;
+- Um sensor PIR;
+- Um ventilador ou um LED para simular o ventilador;
+- Um protoboard e alguns jumpers para fazer as conexões;
+- Um computador com Arduino IDE instalado e configurado para o ESP32;
+- Uma conta no GitHub para clonar o repositório do projeto;
+- Uma conta no HiveMQ para usar o broker MQTT.
+
+Siga os seguintes passos para acessar o projeto:
+
+- Clone o repositório do projeto no seu computador usando o comando `git clone https://github.com/XXXXXXXX/controle-ventilador-esp32.git`;
+- Abra o arquivo `controle-ventilador-esp32.ino` na Arduino IDE;
+- Altere as variáveis `ssid`, `password`, `mqttServer`, `mqttUser` e `mqttPassword` de acordo com os seus dados de rede WiFi e broker MQTT;
+- Conecte o ESP32 ao seu computador pela porta USB e selecione a placa e a porta corretas na Arduino IDE;
+- Faça o upload do código para o ESP32 e abra o monitor serial para ver as mensagens;
+- Conecte os sensores e o ventilador (ou LED) ao ESP32 de acordo com o esquema abaixo:
+
+<img src="https://i.imgur.com/XXXXXXXX.png" alt="Esquema de conexão">
+
+- Use um cliente MQTT, como o MQTTBox, para se conectar ao broker MQTT e enviar e receber mensagens nos tópicos `unifor/cps/vent`, `unifor/cps/temp`, `unifor/cps/umid` e `unifor/cps/pir`;
+- Teste o funcionamento do projeto alterando as condições do ambiente e enviando comandos pelo MQTT.
+
+## Tecnologias
+As tecnologias utilizadas neste projeto são:
+
+- C: linguagem de programação usada para escrever o código do ESP32;
+- Arduino IDE: ambiente de desenvolvimento integrado para programar o ESP32;
+- ESP32: microcontrolador com WiFi integrado usado para controlar os sensores e o ventilador;
+- DHT11: sensor de temperatura e umidade usado para medir as condições do ambiente;
+- PIR: sensor de movimento usado para detectar a presença de pessoas no ambiente;
+- MQTT: protocolo de comunicação usado para enviar e receber mensagens entre o ESP32 e o broker;
+- HiveMQ: broker MQTT usado para intermediar a comunicação entre o ESP32 e o cliente MQTT;
+- MQTTBox: cliente MQTT usado para testar o projeto e enviar comandos para o ventilador.
+
+## Contribuidores
+Este projeto foi desenvolvido por:
+
+- Fulano de Tal (@fulano)
+- Ciclano da Silva (@ciclano)
+- Beltrano dos Santos (@beltrano)
+
+Agradecemos a todos que contribuíram de alguma forma para o sucesso deste projeto.
+
+## Licença
+Este projeto está licenciado sob a licença MIT, que permite o uso, a cópia, a modificação e a distribuição do código, desde que sejam mantidos os direitos autorais e as permissões originais. Veja o arquivo [LICENSE](https://github.com/XXXXXXXX
