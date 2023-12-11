@@ -1,10 +1,3 @@
-<h1>Controle de Ventilador com ESP32</h1>
-<img src="https://i.imgur.com/7ZxY6yR.png" alt="Imagem do projeto">
-<p align="center">
-  <img src="https://img.shields.io/badge/status-completed-green" alt="Status: Completed">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version: 1.0.0">
-  <img src="https://img.shields.io/badge/license-MIT-yellow" alt="License: MIT">
-</p>
 
 ## Índice
 - Descrição
@@ -29,9 +22,7 @@ Este projeto é um programa para controlar um ventilador com base na temperatura
 - Envio do estado do ventilador para o broker MQTT no tópico `unifor/cps/vent`, sendo `on` para ligado e `off` para desligado.
 
 ## Demonstração
-Veja abaixo um vídeo demonstrando o funcionamento do projeto:
-
-!Vídeo do projeto
+Veja  um vídeo demonstrando o funcionamento do projeto: 
 
 ## Acesso
 Para acessar o projeto, você precisa ter os seguintes componentes:
@@ -52,17 +43,14 @@ Siga os seguintes passos para acessar o projeto:
 - Altere as variáveis `ssid`, `password`, `mqttServer`, `mqttUser` e `mqttPassword` de acordo com os seus dados de rede WiFi e broker MQTT;
 - Conecte o ESP32 ao seu computador pela porta USB e selecione a placa e a porta corretas na Arduino IDE;
 - Faça o upload do código para o ESP32 e abra o monitor serial para ver as mensagens;
-- Conecte os sensores e o ventilador (ou LED) ao ESP32 de acordo com o esquema abaixo:
-
-<img src="https://i.imgur.com/XXXXXXXX.png" alt="Esquema de conexão">
-
+- Conecte os sensores e o ventilador a ESP32 de acordo com o esquema abaixo:
 - Use um cliente MQTT, como o MQTTBox, para se conectar ao broker MQTT e enviar e receber mensagens nos tópicos `unifor/cps/vent`, `unifor/cps/temp`, `unifor/cps/umid` e `unifor/cps/pir`;
 - Teste o funcionamento do projeto alterando as condições do ambiente e enviando comandos pelo MQTT.
 
 ## Tecnologias
 As tecnologias utilizadas neste projeto são:
 
-- C: linguagem de programação usada para escrever o código do ESP32;
+- C++: linguagem de programação usada para escrever o código do ESP32;
 - Arduino IDE: ambiente de desenvolvimento integrado para programar o ESP32;
 - ESP32: microcontrolador com WiFi integrado usado para controlar os sensores e o ventilador;
 - DHT11: sensor de temperatura e umidade usado para medir as condições do ambiente;
@@ -70,13 +58,6 @@ As tecnologias utilizadas neste projeto são:
 - MQTT: protocolo de comunicação usado para enviar e receber mensagens entre o ESP32 e o broker;
 - HiveMQ: broker MQTT usado para intermediar a comunicação entre o ESP32 e o cliente MQTT;
 - MQTTBox: cliente MQTT usado para testar o projeto e enviar comandos para o ventilador.
-
-## Contribuidores
-Este projeto foi desenvolvido por:
-
-- Fulano de Tal (@fulano)
-- Ciclano da Silva (@ciclano)
-- Beltrano dos Santos (@beltrano)
 
 Agradecemos a todos que contribuíram de alguma forma para o sucesso deste projeto.
 
