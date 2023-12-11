@@ -56,5 +56,5 @@ As tecnologias utilizadas neste projeto são:
 - HiveMQ: broker MQTT usado para intermediar a comunicação entre o ESP32 e o cliente MQTT;
 - MQTTBox: cliente MQTT usado para testar o projeto e enviar comandos para o ventilador.
 
-Agradeço a todos que contribuíram de alguma forma para o sucesso deste projeto.
+Agradeço a todos que contribuíram de alguma forma para o sucesso desse projeto.
 
