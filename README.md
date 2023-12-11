@@ -5,9 +5,6 @@
 - Demonstração
 - Acesso
 - Tecnologias
-- Contribuidores
-- Licença
-- Referências
 
 ## Descrição
 Este projeto é um programa para controlar um ventilador com base na temperatura, umidade e movimento do ambiente, usando um sensor DHT11, um sensor PIR e um módulo ESP32. O programa se conecta a uma rede WiFi e a um broker MQTT para enviar e receber mensagens sobre os dados dos sensores e o estado do ventilador. O programa também permite que o usuário ligue ou desligue o ventilador manualmente através de um tópico MQTT. O objetivo deste projeto é criar uma solução inteligente e prática para o controle de ventilação de um ambiente. O público-alvo deste projeto são pessoas que desejam automatizar ou personalizar o funcionamento de um ventilador em sua casa ou escritório.
@@ -38,8 +35,8 @@ Para acessar o projeto, você precisa ter os seguintes componentes:
 
 Siga os seguintes passos para acessar o projeto:
 
-- Clone o repositório do projeto no seu computador usando o comando `git clone https://github.com/XXXXXXXX/controle-ventilador-esp32.git`;
-- Abra o arquivo `controle-ventilador-esp32.ino` na Arduino IDE;
+- Clone o repositório do projeto no seu computador usando o comando `git clone https://github.com/bmatox/controle-ventilador-esp32-IoT.git`;
+- Abra o arquivo `sketch_nov17a.ino` na Arduino IDE;
 - Altere as variáveis `ssid`, `password`, `mqttServer`, `mqttUser` e `mqttPassword` de acordo com os seus dados de rede WiFi e broker MQTT;
 - Conecte o ESP32 ao seu computador pela porta USB e selecione a placa e a porta corretas na Arduino IDE;
 - Faça o upload do código para o ESP32 e abra o monitor serial para ver as mensagens;
@@ -59,7 +56,5 @@ As tecnologias utilizadas neste projeto são:
 - HiveMQ: broker MQTT usado para intermediar a comunicação entre o ESP32 e o cliente MQTT;
 - MQTTBox: cliente MQTT usado para testar o projeto e enviar comandos para o ventilador.
 
-Agradecemos a todos que contribuíram de alguma forma para o sucesso deste projeto.
+Agradeço a todos que contribuíram de alguma forma para o sucesso deste projeto.
 
-## Licença
-Este projeto está licenciado sob a licença MIT, que permite o uso, a cópia, a modificação e a distribuição do código, desde que sejam mantidos os direitos autorais e as permissões originais. Veja o arquivo [LICENSE](https://github.com/XXXXXXXX
