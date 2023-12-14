@@ -41,6 +41,7 @@ Siga os seguintes passos para acessar o projeto:
 - Conecte o ESP32 ao seu computador pela porta USB e selecione a placa e a porta corretas na Arduino IDE;
 - Faça o upload do código para o ESP32 e abra o monitor serial para ver as mensagens;
 - Conecte os sensores e o ventilador a ESP32 de acordo com o esquema abaixo:
+  <p align="center"><img src="https://pasteboard.co/9ctrGVlz9mMI.jpg" width="300" alt="Esquema de montagem sem o sensor PIR"></p>
 - Use um cliente MQTT, como o MQTTBox, para se conectar ao broker MQTT e enviar e receber mensagens nos tópicos `unifor/cps/vent`, `unifor/cps/temp`, `unifor/cps/umid` e `unifor/cps/pir`;
 - Teste o funcionamento do projeto alterando as condições do ambiente e enviando comandos pelo MQTT.
 
