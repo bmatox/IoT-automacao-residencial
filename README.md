@@ -30,6 +30,7 @@ Para acessar o projeto, você precisa ter os seguintes componentes:
 - Um sensor PIR;
 - Um ventilador ou um LED para simular o ventilador;
 - Um protoboard e alguns jumpers para fazer as conexões;
+- Módulo relé de 5v;
 - Fonte de alimentação 12v AC/DC;
 - Um computador com Arduino IDE instalado e configurado para o ESP32;
 - Uma conta no GitHub para clonar o repositório do projeto;
