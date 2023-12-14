@@ -76,7 +76,8 @@ Para usar o dashboard do node-red, você precisa:
 - Reiniciar a sua instância do node-red e verificar se os nós UI estão disponíveis na paleta e se a aba dashboard está presente no painel direito;
 - Arrastar e soltar os nós UI que você deseja usar no seu fluxo e configurá-los de acordo com os seus dados e preferências;
 - Conectar os nós UI aos nós MQTT que recebem e enviam as mensagens para o broker;
-- Clicar em deploy e acessar o dashboard pelo editor do node-red ou pela aba dashboard na barra lateral.
+- Clicar em deploy e acessar o dashboard pelo editor do node-red ou pela aba dashboard na barra lateral;
+- Passo a passo mais detalhado da instalação: https://nodered.org/docs/getting-started/windows
 
 Agradeço a todos que contribuíram de alguma forma para o sucesso desse projeto.
 
