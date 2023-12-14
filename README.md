@@ -19,7 +19,7 @@ Este projeto é um programa para controlar um ventilador com base na temperatura
 - Envio do estado do ventilador para o broker MQTT no tópico `unifor/cps/vent`, sendo `on` para ligado e `off` para desligado.
 
 ## Demonstração
-Veja  um vídeo demonstrando o funcionamento do projeto: 
+Veja  um vídeo demonstrando o funcionamento do projeto: https://youtu.be/Aegw4ITioyo
 
 ## Acesso
 Para acessar o projeto, você precisa ter os seguintes componentes:
