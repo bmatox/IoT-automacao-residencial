@@ -7,7 +7,7 @@
 - Tecnologias
 
 ## Descrição
-Este projeto é um programa para controlar um ventilador com base na temperatura, umidade e movimento do ambiente, usando um sensor DHT11, um sensor PIR e um módulo ESP32. O programa se conecta a uma rede WiFi e a um broker MQTT para enviar e receber mensagens sobre os dados dos sensores e o estado do ventilador. O programa também permite que o usuário ligue ou desligue o ventilador manualmente através de um tópico MQTT. O objetivo deste projeto é criar uma solução inteligente e prática para o controle de ventilação de um ambiente. O público-alvo deste projeto são pessoas que desejam automatizar ou personalizar o funcionamento de um ventilador em sua casa ou escritório.
+Este projeto é um programa para controlar um ventilador com base na temperatura, umidade e movimento do ambiente, usando um sensor DHT11, um sensor PIR e um módulo ESP32. O programa se conecta a uma rede WiFi e a um broker MQTT para enviar e receber mensagens sobre os dados dos sensores e o estado do ventilador. O programa também permite que o usuário ligue ou desligue o ventilador manualmente através de um tópico MQTT. O objetivo deste projeto é criar uma solução inteligente e prática para o controle de ventilação de um ambiente. O público-alvo deste projeto são pessoas que desejam automatizar ou personalizar o funcionamento de um ventilador em sua casa ou escritório. Esse projeto consiste na atividade final da disciplina de Sistemas Ciberfísicos Colaborativos do curso de Ciência da Computação da UNIFOR.
 
 ## Funcionalidades
 - Leitura da temperatura e umidade do ambiente a cada 2 segundos usando o sensor DHT11;
