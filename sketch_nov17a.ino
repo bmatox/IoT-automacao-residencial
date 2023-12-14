@@ -2,8 +2,8 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "brisa-2413710"; 
-const char* password = "pzggcm8t"; 
+const char* ssid = "iPhone de Bruno"; 
+const char* password = "bmatos5258"; 
 const char* mqttServer = "broker.hivemq.com"; 
 const int mqttPort = 1883; 
 const char* mqttUser = ""; 
@@ -78,7 +78,7 @@ void callback(char* topic, unsigned char* payload, unsigned int length) {
             Serial.println("Ventilador desligado!");
             modoManual = false; 
             estadoVent = "off";
-            delay(10000);
+            delay(6000);
         }
     }
 }
@@ -111,11 +111,7 @@ void loop() {
             digitalWrite(pinoVent, HIGH);
             Serial.println("Ventilador ligado!");
             estadoVent = "on";
-        } else {
-            digitalWrite(pinoVent, LOW);
-            Serial.println("Ventilador desligado!");
-            estadoVent = "off";
-        }
+        } 
     } else {
         estadoVent = estadoAnterior; // mantém o estado do ventilador igual ao anterior
     }
