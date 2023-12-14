@@ -5,6 +5,7 @@
 - Demonstração
 - Acesso
 - Tecnologias
+- Dashboard
 
 ## Descrição
 Este projeto é um programa para controlar um ventilador com base na temperatura, umidade e movimento do ambiente, usando um sensor DHT11, um sensor PIR e um módulo ESP32. O programa se conecta a uma rede WiFi e a um broker MQTT para enviar e receber mensagens sobre os dados dos sensores e o estado do ventilador. O programa também permite que o usuário ligue ou desligue o ventilador manualmente através de um tópico MQTT. O objetivo deste projeto é criar uma solução inteligente e prática para o controle de ventilação de um ambiente. O público-alvo deste projeto são pessoas que desejam automatizar ou personalizar o funcionamento de um ventilador em sua casa ou escritório. Esse projeto consiste na atividade final da disciplina de Sistemas Ciberfísicos Colaborativos do curso de Ciência da Computação da UNIFOR.
@@ -56,6 +57,25 @@ As tecnologias utilizadas neste projeto são:
 - MQTT: protocolo de comunicação usado para enviar e receber mensagens entre o ESP32 e o broker;
 - HiveMQ: broker MQTT usado para intermediar a comunicação entre o ESP32 e o cliente MQTT;
 - MQTTBox: cliente MQTT usado para testar o projeto e enviar comandos para o ventilador.
+
+## Dashboard
+
+  Dashboard:
+Para visualizar e interagir com os dados dos sensores e o estado do ventilador, você pode usar o dashboard do node-red. O dashboard do node-red é um módulo que fornece um conjunto de nós para criar uma interface gráfica para o seu projeto. Você pode personalizar o layout, o tema, os widgets e as configurações do dashboard, e acessá-lo pelo editor do node-red ou pela aba dashboard na barra lateral. A interface do dashboard está disponível em http://localhost:1880/ui (se as configurações padrão forem usadas).
+
+No dashboard do node-red, você pode:
+
+- Acompanhar a evolução da temperatura e umidade por meio de um gráfico, usando o nó chart;
+- Ligar e desligar o ventilador por meio de um nó switch (on/off), usando o nó ui-switch;
+- Ver indicadores visuais que mostram quando o ventilador/sensor estão ligados, usando os nós ui-led e ui-text.
+
+Para usar o dashboard do node-red, você precisa:
+
+- Instalar o módulo node-red-dashboard, usando o menu - manage palette ou o comando npm i node-red-dashboard no seu diretório de usuário do node-red - tipicamente ~/.node-red;
+- Reiniciar a sua instância do node-red e verificar se os nós UI estão disponíveis na paleta e se a aba dashboard está presente no painel direito;
+- Arrastar e soltar os nós UI que você deseja usar no seu fluxo e configurá-los de acordo com os seus dados e preferências;
+- Conectar os nós UI aos nós MQTT que recebem e enviam as mensagens para o broker;
+- Clicar em deploy e acessar o dashboard pelo editor do node-red ou pela aba dashboard na barra lateral.
 
 Agradeço a todos que contribuíram de alguma forma para o sucesso desse projeto.
 
